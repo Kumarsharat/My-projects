@@ -1,10 +1,11 @@
 def mail_test(mail): 
     if mail.endswith("@gmail.com") or mail.endswith("@zohomail.in"):
         if mail[0].isalpha():
-            return True
-        else:
-            return False
-        return True
+            if " " in mail:
+                return False
+            else:
+                return True
+        
 
     else:
         return False
